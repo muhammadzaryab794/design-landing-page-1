@@ -343,7 +343,6 @@ header{
      transform: translateY(-200%); 
     position: absolute;
      background-color: hsl(var(--bkg));
-     background-color: transparent;
     top: var(--size-fluid-5);
     left: 0; 
     right: 0;
@@ -357,7 +356,7 @@ header{
 li[role="none"],
 .nav_links{
     width: 100%;
-    display: block;
+     display: block; 
     font-size: var(--font-size-1);
 }
 

@@ -9,6 +9,15 @@ const icons = [Icon1, Icon2, Icon3, Icon4, Icon5, Icon6];
 import data from '../data/Reviews.json';
 import SliderIcon from '../assets/images/a1.png';
 import SliderIcon2 from '../assets/images/a2.png'; 
+
+import Avatar1 from '../assets/images/icon1.jpg';
+import Avatar2 from '../assets/images/icon2.jpg';
+import Avatar3 from '../assets/images/icon3.jpg';
+import Avatar4 from '../assets/images/icon4.jpg';
+import Avatar5 from '../assets/images/icon5.jpg';
+import Avatar6 from '../assets/images/icon6.jpg';
+
+const avatars = [Avatar1, Avatar2, Avatar3, Avatar4, Avatar5, Avatar6];
 ---
 <section class="reviews-wrapper blur">
     <div class="reviews-containers container xs">
@@ -25,7 +34,7 @@ import SliderIcon2 from '../assets/images/a2.png';
     {
         data.slice(data.length - 1 ).map((review) => (
             <div class="review grid-sm">
-                <img src={review.avatar} alt={review.name} class="review-avatar" />
+                <img src={avatars[data.indexOf(review)].src} alt={review.name} class="review-avatar" />
                 <p class="review-content">{review.content}</p>
                 <h3 class="review-name text-gradient-reviews">{review.name}</h3>
             </div>
@@ -35,7 +44,7 @@ import SliderIcon2 from '../assets/images/a2.png';
     {
         data.map((review) => (
             <div class="review grid-sm">
-                <img src={review.avatar} alt={review.name} class="review-avatar" />
+                <img src={avatars[data.indexOf(review)].src} alt={review.name} class="review-avatar" />
                 <p class="review-content">{review.content}</p>
                 <h3 class="review-name text-gradient-reviews">{review.name}</h3>
             </div>
@@ -45,7 +54,7 @@ import SliderIcon2 from '../assets/images/a2.png';
     {
         data.slice(0,1).map((review) => (
             <div class="review grid-sm">
-                <img src={review.avatar} alt={review.name} class="review-avatar" />
+                <img src={avatars[data.indexOf(review)].src} alt={review.name} class="review-avatar" />
                 <p class="review-content">{review.content}</p>
                 <h3 class="review-name text-gradient-reviews">{review.name}</h3>
             </div>
