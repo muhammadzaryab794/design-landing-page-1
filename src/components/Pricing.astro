@@ -1,0 +1,39 @@
+---
+import pricingData from '../data/pricing.json';
+import tick from '../assets/images/check-circle.svg';
+import Button from '../components/Button.astro'; 
+---
+<section class="pricing-wrapper">
+    <div class="grid_sm">
+        <h2 class="h2 priceHeading">A Price for Everyone</h2>
+        <p class="text_muted priceHeading">Three tiers to meet your needs.</p>
+    </div>
+
+    <div class="pricing-container container_sm blur">
+        {pricingData.map(card => (
+            <div class={`pricing-card ${card.featured ? 'featured' : ''} grid_sm`}>
+                
+                <div>
+                    <p class="pricing-card-price">{card.price}</p>
+                    <h3 class="pricing-card-pill ">{card.plan}</h3>
+                </div>
+
+                <p class="pricing-card-description text_muted">
+                    {card.description}
+                </p>
+
+                <ul class="pricing-card-feature-container">
+                    {card.details.map(feature => (
+                        <li class="pricing-card-feature">
+                            <img src={tick.src} width="24" alt="check" />
+                            <span>{feature}</span>          
+                        </li>
+                    ))}
+                </ul>
+                <Button text = {card.button.text} link = {card.button.url} style = {card.button.style} />
+                <small class="text-muted">{card.subtext}</small>
+            </div>
+        ))}
+    </div>
+</section>
+

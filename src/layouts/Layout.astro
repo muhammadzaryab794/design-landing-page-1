@@ -1,0 +1,35 @@
+---
+import Navbar from '../components/Navbar.astro';
+import "../styles/global.css";
+const {title} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/favicon.ico" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<div class="wrapper">
+	  <Navbar />
+		<main>
+		<slot />
+		</main>
+		<footer class="blur">
+		<small>Copyright @ <span id="copyrightYear"></span> Design</small>
+		</footer>
+		</div>
+		<script>
+  const year = document.querySelector('#copyrightYear');
+
+  if (year) {
+    year.textContent = new Date().getFullYear().toString();
+  }
+</script>
+	</body>
+</html>

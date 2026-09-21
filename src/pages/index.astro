@@ -1,0 +1,24 @@
+---
+import Icon from '../assets/images/programmers.svg';
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import Services from '../components/Services.astro';
+import Reviews from '../components/Reviews.astro';
+import Pricing from '../components/Pricing.astro';
+import Clients from '../components/Clients.astro';
+import CTA from '../components/CTA.astro'
+---
+
+<Layout title = "new landing page">
+<Hero />
+<section class="programmer container grid grid-sm">
+   <Icon />
+</section>
+
+<Services />   
+<Reviews />
+<Pricing />
+<Clients />
+<CTA />
+
+</Layout>

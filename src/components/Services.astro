@@ -1,0 +1,29 @@
+---
+import Icon1 from '../assets/images/Frame (3).svg';
+import Icon2 from '../assets/images/Frame (4).svg';
+import Icon3 from '../assets/images/Frame (5).svg';
+import Icon4 from '../assets/images/Frame (3).svg';
+import Icon5 from '../assets/images/Frame (4).svg';
+import Icon6 from '../assets/images/Frame (5).svg';
+import data from '../data/services.json';
+const icons = [Icon1, Icon2, Icon3, Icon4, Icon5, Icon6];
+---
+
+<section class="services container-sm"> 
+
+
+    {data.map((service, index) => {
+        const Icon = icons[index];
+
+        return (
+            <div class="service"> 
+                <div class="service--icon text-white"> 
+                    <Icon width="30" />
+                </div>
+
+                <h3>{service.name}</h3>
+                <p class="text_muted">{service.content}</p>
+            </div>
+        );
+    })}
+</section>

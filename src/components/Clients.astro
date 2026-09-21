@@ -1,0 +1,39 @@
+---
+const data = [
+  {
+    "icon": "src/assets/images/Frame (3).svg",
+    
+  },
+  {
+    "icon": "src/assets/images/Frame (4).svg",
+    
+  },
+  {
+    "icon": "src/assets/images/Frame (5).svg",
+    
+  },
+  {
+    "icon": "src/assets/images/Frame (6).svg",
+    
+  },
+  {
+    "icon": "src/assets/images/Frame (7).svg",
+    
+  },
+  {
+    "icon": "src/assets/images/Frame (8).svg",
+    
+  },
+]
+---
+
+<section class="clients grid_sm">
+    <h2 class="clients-heading">Happy Clients</h2>
+    <div class="client-logo-container">
+        {
+            data.map(i =>(
+                <img src={i.icon} class="client-logo text_muted" alt= {i.alt} />
+            ))
+        }
+    </div>
+</section>

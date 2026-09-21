@@ -1,0 +1,78 @@
+---
+import Icon1 from '../assets/images/Frame (3).svg';
+import Icon2 from '../assets/images/Frame (4).svg';
+import Icon3 from '../assets/images/Frame (5).svg';
+import Icon4 from '../assets/images/Frame (6).svg';
+import Icon5 from '../assets/images/Frame (7).svg';
+import Icon6 from '../assets/images/Frame (8).svg';
+const icons = [Icon1, Icon2, Icon3, Icon4, Icon5, Icon6];
+import data from '../data/Reviews.json';
+import SliderIcon from '../assets/images/a1.png';
+import SliderIcon2 from '../assets/images/a2.png'; 
+---
+<section class="reviews-wrapper blur">
+    <div class="reviews-containers container xs">
+
+        <button
+            class="review-btn grid-sm review-btn--prev"
+            id="prev"
+            aria-label="Previous Review"
+        >
+            <img src={SliderIcon.src} width="50" alt="Previous Review" />
+        </button>
+
+        <div class="reviews">
+    {
+        data.slice(data.length - 1 ).map((review) => (
+            <div class="review grid-sm">
+                <img src={review.avatar} alt={review.name} class="review-avatar" />
+                <p class="review-content">{review.content}</p>
+                <h3 class="review-name text-gradient-reviews">{review.name}</h3>
+            </div>
+        ))
+    }
+
+    {
+        data.map((review) => (
+            <div class="review grid-sm">
+                <img src={review.avatar} alt={review.name} class="review-avatar" />
+                <p class="review-content">{review.content}</p>
+                <h3 class="review-name text-gradient-reviews">{review.name}</h3>
+            </div>
+        ))
+    }
+
+    {
+        data.slice(0,1).map((review) => (
+            <div class="review grid-sm">
+                <img src={review.avatar} alt={review.name} class="review-avatar" />
+                <p class="review-content">{review.content}</p>
+                <h3 class="review-name text-gradient-reviews">{review.name}</h3>
+            </div>
+        ))
+    }
+</div>
+
+        <div class="indicator-container">
+            {
+                data.map((review) => (
+                    <button
+                        class={`indicator ${review?.active ? 'active' : ''}`}
+                    ></button>
+                ))
+            }
+        </div>
+
+        <button
+            class="review-btn grid-sm review-btn--next"
+            id="next"
+            aria-label="Next Review"
+        >
+            <img src={SliderIcon2.src} width="50" alt="Next Review" />
+        </button>
+
+    </div>
+</section>
+
+<script src="../js/reviews.js"></script>
+

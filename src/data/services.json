@@ -1,0 +1,33 @@
+[
+  {
+    "icon": "feather:code",
+    "name": "Custom Coding",
+    "content": "Vel eget vestibulum mauris et hendrerit aliquam vel nibh amet, vitae at purus dui semper vel facilisis enim"
+  },
+  {
+    "icon": "feather:users",
+    "name": "User Friendly",
+    "content": "Vel eget vestibulum mauris et hendrerit aliquam vel nibh amet, vitae at purus dui semper vel facilisis enim"
+  },
+  {
+    "icon": "feather:layout",
+    "name": "Modern Design",
+    "content": "Vel eget vestibulum mauris et hendrerit aliquam vel nibh amet, vitae at purus dui semper vel facilisis enim"
+  },
+  {
+    "icon": "feather:zap",
+    "name": "Fast Performance",
+    "content": "Vel eget vestibulum mauris et hendrerit aliquam vel nibh amet, vitae at purus dui semper vel facilisis enim"
+  },
+  {
+    "icon": "feather:smartphone",
+    "name": "Responsive Design",
+    "content": "Vel eget vestibulum mauris et hendrerit aliquam vel nibh amet, vitae at purus dui semper vel facilisis enim"
+  },
+  {
+    "icon": "feather:settings",
+    "name": "Easy Customization",
+    "content": "Vel eget vestibulum mauris et hendrerit aliquam vel nibh amet, vitae at purus dui semper vel facilisis enim"
+  }
+]
+

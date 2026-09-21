@@ -1,0 +1,7 @@
+---
+const { text, link, style, class: className } = Astro.props;
+---
+
+<a href={link} class={`btn btn--${style} ${className || ''}`}>
+  {text}
+</a>    
