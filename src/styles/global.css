@@ -77,6 +77,17 @@ body{
     color: hsl(var(--text));
 }
 
+.nav_container{
+    margin-right: var(--size-3);
+}
+
+.reviews-containers{
+    margin-right: var(--size-3);
+}
+.services{
+    margin-right: var(--size-3);
+}
+
 /* Layout */
 .wrapper{
     overflow: hidden;
